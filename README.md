@@ -285,6 +285,7 @@ For php.ini read notice below!
 * `/etc/php/7.0/apache2`, where PHP7.0 initialization files are stored.
 * `/etc/php/7.2/apache2`, where PHP7.2 initialization files are stored.
 * `/etc/php/7.3/apache2`, where PHP7.3 initialization files are stored.
+
 Notice: The default ini files are different depending on PHP version. You don't need to map all of them. Only map the one for Your selected version of PHP. // *TO-DO: This could be simplified more*
 
 Please, refer to https://docs.docker.com/storage/volumes for more information on using host volumes.

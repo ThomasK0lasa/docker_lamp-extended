@@ -19,7 +19,7 @@ RUN apt install software-properties-common -y
 RUN add-apt-repository ppa:ondrej/php -y && apt update -y
 RUN export DEBIAN_FRONTEND=noninteractive
 RUN apt-get install -y tzdata
-RUN apt-get install iputils-ping inetutils-traceroute -y
+RUN apt-get install iputils-ping inetutils-traceroute telnet -y
 RUN dpkg-reconfigure --frontend noninteractive tzdata
 RUN apt-get install apache2 libapache2-mod-php${PHP_VER} -y
 COPY php-install.sh /usr/sbin/

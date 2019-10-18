@@ -12,7 +12,7 @@ COPY debconf.selections /tmp/
 RUN debconf-set-selections /tmp/debconf.selections
 
 ENV TIMEZONE UTC
-ENV PHP_MODULES "bz2 cgi cli common curl dev enchant fpm gd gmp imap interbase intl json ldap mbstring mysql mysqli odbc opcache pdo pgsql phpdbg pspell readline recode snmp sqlite3 sybase tidy xmlrpc xsl zip"
+ENV PHP_MODULES "bz2 cgi cli common curl dev enchant fpm gd gmp imap interbase intl json ldap mbstring mcrypt mysql mysqli odbc opcache pdo pgsql phpdbg pspell readline recode snmp sqlite3 sybase tidy xmlrpc xsl zip"
 
 RUN apt-get install -y zip unzip wget
 RUN apt install software-properties-common -y

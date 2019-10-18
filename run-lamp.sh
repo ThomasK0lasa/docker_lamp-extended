@@ -140,6 +140,9 @@ fi
 if [ $LOG_LEVEL != 'warn' ]; then
     /bin/sed -i "s/LogLevel\ warn/LogLevel\ ${LOG_LEVEL}/g" /etc/apache2/apache2.conf
 fi
+if [ $X_FORWARDED_HEADER == 'TRUE' ]; then
+    /bin/sed -i 's~LogFormat "\%h \%l \%u \%t \\"\%r\\" \%>s \%O \\"\%{Referer}i\\" \\"\%{User-Agent}i\\"" combined~LogFormat "\%{X-Forwarded-For}i \%l \%u \%t \\"\%r\\" \%>s \%O \\"\%{Referer}i\\" \\"\%{User-Agent}i\\"" combined~g' /etc/apache2/apache2.conf
+fi
 
 # If there's no php.ini then copy default ini file
 if [ ! -f /etc/php/${PHP_VER}/apache2/php.ini ]; then

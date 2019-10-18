@@ -95,6 +95,14 @@ This image uses environment variables to allow the configuration of some paramet
 
 ----
 
+* Variable name: **X_FORWARDED_HEADER**
+* Default value: **TRUE**
+* Accepted values: TRUE, FALSE
+* Description: Enables logging of X-forwarded-header (instead of client address ip) in apache2 access.log.
+* Concerns: Apache
+
+----
+
 * Variable name: **ADD_USR**
 * Default value: **TRUE**
 * Accepted values: TRUE, FALSE

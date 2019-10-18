@@ -11,4 +11,4 @@ curl -fSL 'http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_lin_x8
         && mv ioncube/ioncube_loader_lin_${VER}.so /usr/lib/php/ioncube/ioncube_loader_lin_${VER}.so \
         && rm -r ioncube
 
-echo 'zend_extension = "/usr/lib/php/ioncube/ioncube_loader_lin_${VER}.so"' >> /etc/php/${VER}/apache2/conf.d/00-ioncube.ini
+echo 'zend_extension = "/usr/lib/php/ioncube/ioncube_loader_lin_'${VER}'.so"' >> /etc/php/${VER}/apache2/conf.d/00-ioncube.ini

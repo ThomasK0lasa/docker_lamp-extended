@@ -5,13 +5,12 @@ This Docker container implements LAMP stack with a set of popular PHP modules, I
 To select different version of PHP then default 7.3 use variable PHP_VER. To turn on IonCube use IONCUBE var. You can set different TimeZone for Ubuntu and PHP. This image was tested and used sucesfully on Synology DMS6.2 for hosting purposes (without mail part). All sugestions and comments are welcomed.
 
 Includes the following components:
-docke
  * Ubuntu 18.04 LTS Bionic Beaver base image.
  * Apache HTTP Server 2.4.29
  * MariaDB 10.1.41
  * Postfix 3.3
  * PHP 7.3 (or 5.6, 7.0, 7.2)
- * PHP modules:
+ * PHP installed modules:
  	bz2, calendar, Core, ctype, curl, date, dom, enchant, exif, fileinfo, filter, ftp, gd, gettext, gmp, hash, iconv, imap, interbase, intl, json, ldap, libxml, mbstring, mcrypt, mysqli, mysqlnd, odbc, openssl, pcntl, pcre, PDO, pdo_dblib, PDO_Firebird, pdo_mysql, PDO_ODBC, pdo_pgsql, pdo_sqlite, pgsql, Phar, posix, pspell, readline, recode, Reflection, session, shmop, SimpleXML, snmp, sockets, SPL, sqlite3, standard, sysvmsg, sysvsem, sysvshm, tidy, tokenizer, wddx, xml, xmlreader, xmlrpc, xmlwriter, xsl, Zend OPcache, zip, zlib, IonCube
  * Development tools:
 	* git
@@ -23,7 +22,7 @@ docke
 	* nano
 	* ftp
 	* curl
-* phpmyadmin 4.9.1
+ * phpmyadmin 4.9.1
 
 Installation from [Docker registry hub](https://hub.docker.com/r/thk1/lamp-extended).
 ----
@@ -51,6 +50,14 @@ This image uses environment variables to allow the configuration of some paramet
 * Default value: **7.3**
 * Accepted values: 5.6, 7.0, 7.2, 7.3
 * Description: Selected version will be started on container run.
+* Concerns: PHP
+
+----
+
+* Variable name: **PHP_ENABLE_MODS**
+* Default value: **rewrite headers expires**
+* Accepted values: Any name of the already installed modules
+* Description: Selected modules will be enabled on container run.
 * Concerns: PHP
 
 ----

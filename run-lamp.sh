@@ -197,7 +197,7 @@ a2dismod php7.3 php7.2 php7.0 php5.6
 update-alternatives --set php /usr/bin/php${PHP_VER}
 
 # Running Apache with selected PHP version:
-a2enmod php${PHP_VER} rewrite headers
+a2enmod php${PHP_VER} ${PHP_ENABLE_MODS}
 usermod --non-unique --uid $WWWDATA_USR_ID www-data \
   && groupmod --non-unique --gid $WWWDATA_GRP_ID www-data
 chown -R www-data:www-data /var/www/html

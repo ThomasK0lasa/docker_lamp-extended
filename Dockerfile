@@ -109,6 +109,7 @@ VOLUME /etc/php/7.2/apache2/
 VOLUME /etc/php/7.3/apache2/
 
 EXPOSE 80
+EXPOSE 443
 EXPOSE 3306
 
 CMD ["/usr/sbin/run-lamp.sh"]
